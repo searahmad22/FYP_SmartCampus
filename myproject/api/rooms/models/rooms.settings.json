@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rooms",
+  "info": {
+    "name": "Rooms"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "room": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "students": {
+      "via": "room",
+      "collection": "students"
+    }
+  }
+}
